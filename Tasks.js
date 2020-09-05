@@ -70,7 +70,7 @@ function maxNum(a,b,c){
     return c;
 }
 
-console.log("The highest number is : " + maxNum(855,89,84))
+console.log("The highest number is : " + maxNum(855,89,84)) //print maxnum
 
 //........................................Task 7.....................................//
 
