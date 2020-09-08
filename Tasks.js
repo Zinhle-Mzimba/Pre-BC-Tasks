@@ -32,22 +32,34 @@ if(((a || b) === 65) || ( (a+b) === 65 )){
 return false; //return false if check65 does not fulfil if statement
 }
 
-console.log(check65(65,5)); //print out check65
+console.log(check65(65,5)); //check true
+console.log(check65(3,45)); //check false
+
 
 //...............................Task 4....................................//
 
-function check3(a,b){
     
-    if(((a || b) === 3) && ( (a+b) === 3  ))
-    {
-        return true;}
-    else 
-    return false;
+    function check3(a,b) {
+        
+        var remainder;
+        var c = a + b ;
+        
+        while( c > 0 ){
+           
+            remainder = c % 10
+           
+           while (remainder == 3  ){
+                c = c / 10; 
+                 if((a || b) === 3)
+                    return true
 
+            }
+
+            return false
+        }
     }
-    
-    console.log(check3(3,10));
-
+    console.log(check3(3,3)) //check false
+    console.log(check3(3,10)) //check true
 
 //.....................................Task 5...............................//
 function AreaOfTriangle(a,b,c){
@@ -81,7 +93,7 @@ console.log("The highest number is : " + maxNum(855,89,84)) //print maxnum
    return C
 }
 
-console.log( convertFahToCel(100) +  " Celcius")
+console.log(convertFahToCel(100) +  " Celcius")
 
 function convertCelToFah(C)
 {
@@ -95,16 +107,17 @@ console.log(convertCelToFah(37.8) +  " Fahrenheit")
 //.......................Task8.........................../ 
 
 function convertNoToTime(a){
-min =  a % 60 ; //use modulo division to get minuues
-hour = (a- min) / 60 // from the number subtract minute and divide by 60 to get hours
 
+min =  a % 60 ; //use modulo division to get minuues
+hour = (a - min) / 120 // from number subtract minutes and divide by 120
+ 
 return min, hour ;
 }
-console.log(convertNoToTime(100)  + hour + " hours " + min + " minute/s ") //print out
+console.log(convertNoToTime(71)  + hour + " hour/s " + min + " minute/s ") //print out
 
 //........................task 9.......................//
 
-
+function realNum(){
 result = 0;
 
 
@@ -113,13 +126,13 @@ for(i =  0 ; i < 1000 ; i++){
     if( i % 3 == 0 || i % 5 == 0) //only add numbers that are divisible by 3 or 5
     {
         result +=i; //add result
-
-        if(result === 233168) //print only final answer
-        
+        if(result === 233168)
         console.log(result)
     }
 
+} 
 }
+realNum();
 
 //......................................Task 10 ......................................................//
 
@@ -141,17 +154,17 @@ printVowels();
 //.................................Task 11..............................//
 
 function commonLetters(){
-    var string1 = "Let's see what we'll get"
-    var string2 = "How many letters are common"
 
+    var string1 = "let us see"
+    var string2 = "what is common".replace(/\s/g,''); //remove white space
+    
 for(var i = 0; i < string1.length; i++){
 
-    for(var j = 0; string2.length; j++){
+    for(var j = 0; j < string2.length; j++){
         
         if(string1.charAt(i) == string2.charAt(j)){
         
-            console.log(string1.charAt(i)
-            );
+            console.log("common letters are : " + string1.charAt(i));
         }
         }
     }
