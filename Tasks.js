@@ -37,7 +37,7 @@ evenOrOdd(2);
 
 //.....................................Task 0.5...............................//
 function AreaOfTriangle(a, b, c) {
-  return (1 / 2)*(a + b + c);
+  return (1 / 2) * (a + b + c);
 }
 console.log("The area of the triangle is " + AreaOfTriangle(3, 4, 5));
 
@@ -82,45 +82,31 @@ function convertNoToTime(a) {
   } else {
     return hour + " hours, " + min + " minutes";
   }
-
-  return min, hour;
 }
 console.log(convertNoToTime(42));
 
 //......................................Task 0.9 ......................................................//
 
 function printVowels(string) {
-  for (i = 0; i < string.length; i++) {
-    if (
-      string.charAt(i) == "a" ||
-      string.charAt(i) == "e" ||
-      string.charAt(i) == "i" ||
-      string.charAt(i) == "o" ||
-      string.charAt(i) == "u" ||
-      string.charAt(i) == "A" ||
-      string.charAt(i) == "E" ||
-      string.charAt(i) == "I" ||
-      string.charAt(i) == "O" ||
-      string.charAt(i) == "U"
-    )
-      console.log("vowels in the string are: " + string.charAt(i));
-  }
+  var regexOfVowels = /[aeiouAEIOU]/gi;
+
+  var stringArray = string.match(regexOfVowels);
+
+  console.log("the vowels in the string are : " + stringArray);
 }
 printVowels("I love leArning yoU");
 
 //.................................Task 0.10..............................//
 
 function commonLetters(string1, string2) {
-  common = "";
+  common = [];
+
   for (var i = 0; i < string1.length; i++) {
-    for (var j = 0; j < string2.length; j++) {
-      if (string1.charAt(i) == string2.charAt(j).replace(/\s/g, "")) {
-        console.log(string1.charAt(i));
-      }
+    if (string2.indexOf(string1[i]) >= 0) {
+      common.push(string1[i]);
     }
   }
+  console.log("Common letters are : " + common);
 }
 
 commonLetters("computers", "houses");
-//it will only repeat a character if it appears on 2 differant words from the same string, uncomment the below code to see
-// commonLetters("computer", "house puter")
