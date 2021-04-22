@@ -37,11 +37,13 @@ evenOrOdd(2);
 
 //.....................................Task 0.5...............................//
 function AreaOfTriangle(a, b, c) {
-  s = ((1 / 2) * (a + b + c));
-  area = Math.sqrt((s*((s-a)*(s-b)*(s-c))))
-  return area
+  s = (1 / 2) * (a + b + c);
+  area = Math.sqrt(s * ((s - a) * (s - b) * (s - c)));
+  return area;
 }
-console.log("The area of the triangle is " + AreaOfTriangle(3, 4, 5) + "sq/units");
+console.log(
+  "The area of the triangle is " + AreaOfTriangle(3, 4, 5) + "sq/units"
+);
 
 //......................................Task 0.6.................................//
 function maxNum(a, b, c) {
