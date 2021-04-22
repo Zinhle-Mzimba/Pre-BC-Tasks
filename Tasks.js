@@ -1,4 +1,4 @@
-//.....Task 1...//
+//.....Task 0.1...//
 
 var x = 0;
 var y = 1;
@@ -10,7 +10,7 @@ y = y + x;
 
 console.log(x + "\n" + y);
 
-//...................task 2.......................
+//...................task 0.2.......................
 
 var x = 1 + 1 * 2;
 var y = (1 + 1) * 2;
@@ -19,45 +19,29 @@ var a = 1 + (1 * 2) / 2;
 var b = (1 + 1 * 2) / 2;
 console.log(x + "\n" + y + "\n" + z + "\n" + a + "\n" + b);
 
-//task 3
-function check65(a, b) {
-  if ((a || b) === 65 || a + b === 65) {
-    return true;
-  }
-  return false;
+// Task 0.3
+function hello(a) {
+  return "Hello " + a + "!";
 }
 
-console.log(check65(65, 5));
-console.log(check65(3, 45));
+console.log(hello("Zinhle"));
 
-//...............................Task 4....................................//
+//task 0.4
 
-function check3(a, b) {
-  var remainder;
-  var c = a + b;
-
-  while (c > 0) {
-    remainder = c % 10;
-
-    while (remainder == 3) {
-      c = c / 10;
-      if ((a || b) === 3) return true;
-    }
-
-    return false;
-  }
+function evenOrOdd(a) {
+  if (a % 2 === 0) console.log("Even");
+  else console.log("Odd");
 }
-console.log(check3(3, 3));
-console.log(check3(3, 10));
+evenOrOdd(87);
+evenOrOdd(2);
 
-//.....................................Task 5...............................//
+//.....................................Task 0.5...............................//
 function AreaOfTriangle(a, b, c) {
-  return (1 / 2) * (a + b + c);
+  return (1 / 2)*(a + b + c);
 }
+console.log("The area of the triangle is " + AreaOfTriangle(3, 4, 5));
 
-console.log("The area of the triangle is " + AreaOfTriangle(5, 88, 7));
-
-//......................................Task 6.................................//
+//......................................Task 0.6.................................//
 function maxNum(a, b, c) {
   if (a > b && a > c) return a;
   else if (b > a && b > c) return b;
@@ -65,10 +49,10 @@ function maxNum(a, b, c) {
 }
 
 console.log("The highest number is : " + maxNum(855, 89, 84));
-//........................................Task 7.....................................//
+//........................................Task 0.7.....................................//
 
 function convertFahToCel(F) {
-  var C = (F - 32) / 1.8;
+  var C = Math.floor((F - 32) / 1.8);
 
   return C;
 }
@@ -76,14 +60,14 @@ function convertFahToCel(F) {
 console.log(convertFahToCel(100) + " Celcius");
 
 function convertCelToFah(C) {
-  var F = C * 1.8 + 32;
+  var F = Math.floor(C * 1.8 + 32);
 
   return F;
 }
 
 console.log(convertCelToFah(37.8) + " Fahrenheit");
 
-//.......................Task8.........................../
+//.......................Task 0.8.........................../
 
 function convertNoToTime(a) {
   min = a % 60;
@@ -103,24 +87,10 @@ function convertNoToTime(a) {
 }
 console.log(convertNoToTime(42));
 
-//........................task 9.......................//
-
-function realNum() {
-  result = 0;
-
-  for (i = 0; i < 1000; i++) {
-    if (i % 3 == 0 || i % 5 == 0) {
-      result += i;
-      if (result === 233168) console.log(result);
-    }
-  }
-}
-realNum();
-
-//......................................Task 10 ......................................................//
+//......................................Task 0.9 ......................................................//
 
 function printVowels(string) {
-  for (i = 0; i < string.length - 1; i++) {
+  for (i = 0; i < string.length; i++) {
     if (
       string.charAt(i) == "a" ||
       string.charAt(i) == "e" ||
@@ -133,14 +103,15 @@ function printVowels(string) {
       string.charAt(i) == "O" ||
       string.charAt(i) == "U"
     )
-      console.log(string.charAt(i));
+      console.log("vowels in the string are: " + string.charAt(i));
   }
 }
-printVowels("I love leArning");
+printVowels("I love leArning yoU");
 
-//.................................Task 11..............................//
+//.................................Task 0.10..............................//
 
 function commonLetters(string1, string2) {
+  common = "";
   for (var i = 0; i < string1.length; i++) {
     for (var j = 0; j < string2.length; j++) {
       if (string1.charAt(i) == string2.charAt(j).replace(/\s/g, "")) {
@@ -150,4 +121,6 @@ function commonLetters(string1, string2) {
   }
 }
 
-commonLetters("let's see", "what's common");
+commonLetters("computers", "houses");
+//it will only repeat a character if it appears on 2 differant words from the same string, uncomment the below code to see
+// commonLetters("computer", "house puter")
