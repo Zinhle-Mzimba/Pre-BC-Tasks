@@ -20,25 +20,30 @@ var b = (1 + 1 * 2) / 2;
 console.log(x + "\n" + y + "\n" + z + "\n" + a + "\n" + b);
 
 // Task 0.3
-function hello(a) {
-  return "Hello " + a + "!";
+function hello(name) {
+  return "Hello " + name + "!";
 }
 
 console.log(hello("Zinhle"));
 
 //task 0.4
 
-function evenOrOdd(a) {
-  if (a % 2 === 0) console.log("Even");
+function evenOrOdd(number) {
+  if (number % 2 === 0) console.log("Even");
   else console.log("Odd");
 }
 evenOrOdd(87);
 evenOrOdd(2);
 
 //.....................................Task 0.5...............................//
-function AreaOfTriangle(a, b, c) {
-  s = (1 / 2) * (a + b + c);
-  area = Math.sqrt(s * ((s - a) * (s - b) * (s - c)));
+function AreaOfTriangle(sideA, sideB, sideC) {
+  semiPerimeter = (1 / 2) * (sideA + sideB + sideC);
+  area = Math.sqrt(
+    semiPerimeter *
+      ((semiPerimeter - sideA) *
+        (semiPerimeter - sideB) *
+        (semiPerimeter - sideC))
+  );
   return area;
 }
 console.log(
@@ -46,10 +51,10 @@ console.log(
 );
 
 //......................................Task 0.6.................................//
-function maxNum(a, b, c) {
-  if (a > b && a > c) return a;
-  else if (b > a && b > c) return b;
-  else if (c > a && c > b) return c;
+function maxNum(numA, numB, numC) {
+  if (numA > numB && numB > numC) return numA;
+  else if (numB > numA && numB > numC) return numB;
+  else if (numC > numA && numC > numB) return numC;
 }
 
 console.log("The highest number is : " + maxNum(855, 89, 84));
@@ -73,9 +78,9 @@ console.log(convertCelToFah(37.8) + " Fahrenheit");
 
 //.......................Task 0.8.........................../
 
-function convertNoToTime(a) {
-  min = a % 60;
-  hour = Math.floor(a / 60);
+function convertNoToTime(number) {
+  min = number % 60;
+  hour = Math.floor(number / 60);
 
   if (hour <= 1 && min <= 1) {
     return hour + " hour, " + min + " minute";
@@ -92,7 +97,8 @@ console.log(convertNoToTime(42));
 //......................................Task 0.9 ......................................................//
 
 function printVowels(string) {
-  var regexOfVowels = /[aeiouAEIOU]/gi;
+  string = string.toLowerCase();
+  var regexOfVowels = /[aeiou]/gi;
 
   var stringArray = string.match(regexOfVowels);
 
@@ -104,6 +110,8 @@ printVowels("I love leArning yoU");
 
 function commonLetters(string1, string2) {
   common = [];
+  string1 = string1.toLowerCase();
+  string2 = string2.toLowerCase();
 
   for (var i = 0; i < string1.length; i++) {
     if (string2.indexOf(string1[i]) >= 0) {
@@ -113,4 +121,4 @@ function commonLetters(string1, string2) {
   console.log("Common letters are : " + common);
 }
 
-commonLetters("computers", "houses");
+commonLetters("cOmpAuters", "Houases");
