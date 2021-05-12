@@ -1,4 +1,4 @@
-//.....Task 0.1...//
+//Task 0.1
 
 var x = 0;
 var y = 1;
@@ -10,7 +10,7 @@ y = y + x;
 
 console.log(x + "\n" + y);
 
-//...................task 0.2.......................
+//task 0.2
 
 var x = 1 + 1 * 2;
 var y = (1 + 1) * 2;
@@ -35,7 +35,7 @@ function evenOrOdd(number) {
 evenOrOdd(87);
 evenOrOdd(2);
 
-//.....................................Task 0.5...............................//
+//Task 0.5
 function AreaOfTriangle(sideA, sideB, sideC) {
   semiPerimeter = (1 / 2) * (sideA + sideB + sideC);
   area = Math.sqrt(
@@ -50,7 +50,7 @@ console.log(
   "The area of the triangle is " + AreaOfTriangle(3, 4, 5) + "sq/units"
 );
 
-//......................................Task 0.6.................................//
+//Task 0.6
 function maxNum(numA, numB, numC) {
   if (numA > numB && numB > numC) return numA;
   else if (numB > numA && numB > numC) return numB;
@@ -58,7 +58,7 @@ function maxNum(numA, numB, numC) {
 }
 
 console.log("The highest number is : " + maxNum(855, 89, 84));
-//........................................Task 0.7.....................................//
+//Task 0.7
 
 function convertFahToCel(F) {
   var C = Math.floor((F - 32) / 1.8);
@@ -76,7 +76,7 @@ function convertCelToFah(C) {
 
 console.log(convertCelToFah(37.8) + " Fahrenheit");
 
-//.......................Task 0.8.........................../
+//Task 0.8
 
 function convertNoToTime(number) {
   min = number % 60;
@@ -94,7 +94,7 @@ function convertNoToTime(number) {
 }
 console.log(convertNoToTime(42));
 
-//......................................Task 0.9 ......................................................//
+//Task 0.9
 
 function printVowels(string) {
   string = string.toLowerCase();
@@ -106,7 +106,7 @@ function printVowels(string) {
 }
 printVowels("I love leArning yoU");
 
-//.................................Task 0.10..............................//
+//Task 0.10
 
 function commonLetters(string1, string2) {
   common = [];
