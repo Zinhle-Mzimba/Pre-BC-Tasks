@@ -104,7 +104,7 @@ function printVowels(string) {
 
   console.log("the vowels in the string are : " + stringArray);
 }
-printVowels("I love leArning yoU");
+printVowels("I love leArning new things");
 
 //Task 0.10
 
